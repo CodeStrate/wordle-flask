@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.game-title{
+    color: #2a2a2a;
+    text-align: center;
+    margin: 5px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+hr{
+    width:400px;
+    margin: auto;
+}
+
+#board{
+    width: 350px;
+    height: 420px;
+    margin-top: .5rem;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tile{
+    border: 2px solid #b3b3b3;
+    width: 60px;
+    height: 60px;
+    margin: 2.5px;
+
+    color: #2a2a2a;
+    font-size: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+
+    /* Flip animation properties */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    position: relative;
+
+}
+
+.correct {
+    background-color: #6AAA64;
+    color: white;
+    border-color: white;
+}
+
+.present {
+    background-color: #C9B458;
+    color: white;
+    border-color: white;
+    
+    
+}
+
+.absent {
+    background-color: #787C7E;
+    color: white;
+    border-color:white;
+}
+
+
+@keyframes flip {
+    0%{
+        transform: rotateX(0);
+    }
+    
+    50% {
+        transform: rotateX(90deg);
+    }
+    51% {
+        background-color: inherit; /* Set the correct background */
+        color: inherit; /* Set the correct text color */
+        border-color: inherit; /* Set the correct border color */
+    }
+    
+    100% {
+        transform: rotateX(0);
+    }
+}
+
+.animation-flip{
+    animation: flip 0.6s forwards;
+}
+
+.keyboard-row{
+    width: 420px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.key-button{
+    border: 1px solid slategray;
+    width: 36px;
+    height: 40px;
+    margin: 1px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    transition: opacity 0.2s ease;
+}
+
+.key-button:hover{
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+.enter-key{
+    width: 76px;
+    color: white;
+    background-color: cornflowerblue;
+}
+
