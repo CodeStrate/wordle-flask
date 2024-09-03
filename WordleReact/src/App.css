@@ -27,7 +27,7 @@ hr{
     margin: auto;
 }
 
-#board{
+.board{
     width: 350px;
     height: 420px;
     margin-top: .5rem;
@@ -119,6 +119,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
+    background: none;
     font-weight: 600;
     transition: opacity 0.2s ease;
 }

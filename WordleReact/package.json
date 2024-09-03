@@ -10,6 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "nanoid": "^5.0.7",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
@@ -26,6 +27,5 @@
     "typescript-eslint": "^8.0.1",
     "vite": "^5.4.1"
   },
-
-  "proxy" : "127.0.0.1:5000"
+  "proxy": "127.0.0.1:5000"
 }
