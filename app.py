@@ -28,10 +28,6 @@ except RuntimeError: # if the corpora (word lists) arent downloaded
 
 
 
-@app.route('/') # base route
-def index():
-    return render_template('index.html')
-
 @app.route('/word_api', methods=['GET'])
 def word_api():
     word = random.choice(word_list)
