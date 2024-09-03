@@ -11,7 +11,7 @@ const Row = ({rowIndex}: RowProps) => {
     return (
         <>
             {Array.from({length: colCount}).map((_, colIndex) => (
-                <Tile key={nanoid()} rowIndex={rowIndex} colIndex={colIndex} letter="" />
+                <Tile key={nanoid()} rowIndex={rowIndex} colIndex={colIndex} letter="" status=""/>
             ))}
         </>
     )

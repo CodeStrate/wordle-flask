@@ -1,11 +1,24 @@
-type Char = 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' 
-| 'l' | 'm' | 'n' | 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' 
-| 'y' | 'z' | ''
+export type Char = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | 'K' 
+| 'L' | 'M' | 'N' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' 
+| 'Y' | 'Z' | ''
+
+
+export interface WordleContextType {
+    boardState: TileProps[][];
+    currentRow: number;
+    currentCol: number;
+    gameOver: boolean;
+    setBoardState: React.Dispatch<React.SetStateAction<TileProps[][]>>;
+    setCurrentRow: React.Dispatch<React.SetStateAction<number>>;
+    setCurrentCol: React.Dispatch<React.SetStateAction<number>>;
+    setGameOver: React.Dispatch<React.SetStateAction<boolean>>;
+}
 
 export interface TileProps {
     rowIndex: number;
     colIndex: number;
     letter: Char;
+    status: "correct" | "present" | "absent" | ""
 }
 
 export interface RowProps {

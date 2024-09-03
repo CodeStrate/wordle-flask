@@ -1,8 +1,8 @@
 import { TileProps } from "./interfaces"
 
-const Tile = ({rowIndex, colIndex, letter}: TileProps) => {
+const Tile = ({rowIndex, colIndex, letter, status}: TileProps) => {
     return (
-        <span className={`tile`} id={`${rowIndex}-${colIndex}`}>{letter}</span>
+        <span className={`tile ${status}`} id={`${rowIndex}-${colIndex}`}>{letter}</span>
     )
 }
 
