@@ -35,5 +35,5 @@ export const useWordle = () => {
     const context = useContext(WordleContext);
     if(context === undefined) throw new Error(`useWordle hook must be used inside the WordleProvider.`);
 
-    return;
+    return context;
 }

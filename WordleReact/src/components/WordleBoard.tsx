@@ -54,7 +54,6 @@ const WordleBoard = () => {
         
     }
 
-    useEffect(() => console.log(boardState), [boardState])
 
     useEffect(() => {
         const handleKeyUp = (event: KeyboardEvent) => {
