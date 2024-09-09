@@ -1,11 +1,13 @@
-from flask import Flask, render_template, jsonify, request
-
+from flask import Flask, jsonify, request
+from flask_cors import CORS
 import nltk, random
 from nltk.corpus import brown, words
 
 
-
+cors = CORS()
 app = Flask(__name__)
+cors.init_app(app)
+
 
 try:
     brown_words = set(brown.words())

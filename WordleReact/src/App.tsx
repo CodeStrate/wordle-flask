@@ -12,7 +12,6 @@ function App() {
       <br />
     <WordleBoard />
     <Keyboard rows={keyboardArray}/>
-    <h1 className="game-title" id="answer"></h1>
     </main>
   )
 }
