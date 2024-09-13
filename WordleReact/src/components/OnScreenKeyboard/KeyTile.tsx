@@ -12,7 +12,7 @@ export default function KeyTile({keyValue}: KeyTileProps){
             return "Backspace";
         }
         
-        return "Key" + keyValue;
+        return keyValue;
     }
     
     const handleClick = () => {
@@ -20,7 +20,7 @@ export default function KeyTile({keyValue}: KeyTileProps){
     }
 
     return (
-        <button className={`key-button ${enter_class}`} id={keyID(keyValue)} onClick={handleClick}>
+        <button className={`key-button ${enter_class}`} id={keyID(keyValue)} onClick={handleClick} type="button">
             {keyValue}
         </button>
     )
