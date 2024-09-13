@@ -23,7 +23,7 @@ export const WordleProvider: React.FC<{ children : ReactNode}> = ({children}) =>
     const [gameOver, setGameOver] = useState(false);
 
     return (
-        <WordleContext.Provider value={{boardState, currentRow, currentCol, gameOver, setBoardState, setCurrentRow,
+        <WordleContext.Provider value={{boardState, currentRow, currentCol, gameOver, rowCount, colCount, setBoardState, setCurrentRow,
             setCurrentCol, setGameOver
         }}>
             {children}

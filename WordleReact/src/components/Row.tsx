@@ -6,9 +6,7 @@ import { nanoid } from "nanoid";
 
 const Row = ({rowIndex}: RowProps) => {
 
-    const colCount: number = import.meta.env.VITE_WORD_LENGTH;
-
-    const {boardState} = useWordle();
+    const {boardState, colCount} = useWordle();
 
 
     return (

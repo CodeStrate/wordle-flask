@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
-
 * {
     font-family: 'Poppins', sans-serif;
     margin: 0;
@@ -76,29 +74,6 @@ hr{
     border-color:white;
 }
 
-
-@keyframes flip {
-    0%{
-        transform: rotateX(0);
-    }
-    
-    50% {
-        transform: rotateX(90deg);
-    }
-    51% {
-        background-color: inherit; /* Set the correct background */
-        color: inherit; /* Set the correct text color */
-        border-color: inherit; /* Set the correct border color */
-    }
-    
-    100% {
-        transform: rotateX(0);
-    }
-}
-
-.animation-flip{
-    animation: flip 0.6s forwards;
-}
 
 .keyboard-row{
     width: 420px;

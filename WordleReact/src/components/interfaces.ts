@@ -5,6 +5,8 @@ export type Char = 'A' | 'B' | 'C' | 'D' | 'E' | 'F' | 'G' | 'H' | 'I' | 'J' | '
 
 export interface WordleContextType {
     boardState: TileProps[][];
+    rowCount: number;
+    colCount: number;
     currentRow: number;
     currentCol: number;
     gameOver: boolean;

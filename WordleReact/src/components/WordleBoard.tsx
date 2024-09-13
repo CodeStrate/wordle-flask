@@ -3,14 +3,11 @@ import Row from "./Row";
 import { Char } from "./interfaces";
 import { useEffect } from "react";
 import { useWordle } from "../context/WordleContext";
-import { useWords } from "../api/WordsAPI";
-import { checkWordList } from "../api/checkWordList";
+import { useWords, checkWordList } from "../api/WordsAPI";
 
 const WordleBoard = () => {
-    const rowCount: number = import.meta.env.VITE_ATTEMPTS;
-    const colCount: number = import.meta.env.VITE_WORD_LENGTH;
 
-    const {boardState, setBoardState, gameOver, currentCol, currentRow, setCurrentCol, setCurrentRow, setGameOver } = useWordle();
+    const {boardState, setBoardState, gameOver, currentCol, currentRow, rowCount, colCount, setCurrentCol, setCurrentRow, setGameOver } = useWordle();
     const word: string = useWords();
 
 
@@ -44,13 +41,14 @@ const WordleBoard = () => {
 
             if(key === "BACKSPACE"){
                 //handle bs
-                if(0 < currentCol && currentCol <= colCount){
-                    setCurrentCol(prev => (prev - 1))
-                }
                 newBoardState[currentRow][currentCol] = {
                     ...newBoardState[currentRow][currentCol],
                     letter: ""
                   };
+                  
+                if(0 < currentCol && currentCol <= colCount){
+                    setCurrentCol(prev => (prev - 1))
+                }
 
             }
 
@@ -158,9 +156,9 @@ const WordleBoard = () => {
         return () => {
             window.removeEventListener("keyup", handleKeyUp);
         }
-    }, [currentRow, currentCol, boardState, gameOver])
+    }, [handleKeyPress])
 
-    useEffect(() => console.log(word), [word])
+    useEffect(() => console.log(word), [word])  //it was for debugging.
 
 
     return (

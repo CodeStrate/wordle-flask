@@ -1,7 +1,7 @@
 import './App.css'
 import WordleBoard from './components/WordleBoard'
 import Keyboard from './components/OnScreenKeyboard/Keyboard'
-import { keyboardArray } from './components/OnScreenKeyboard/KeyboardKeys'
+import { keyboardArray } from './utils/KeyboardKeys'
 
 function App() {
 
